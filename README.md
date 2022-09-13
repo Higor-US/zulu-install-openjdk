@@ -3,6 +3,7 @@
 [install the necessary dependencies]
 
 sudo apt-get q update
+
 sudo apt-get -yq install gnupg curl
 
 [add Azul's public key]
