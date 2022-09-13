@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INSTALL ZULU - CLI</title>
+</head>
+<body>
+    <h1>HOW TO INSTALL ZULU JAVA IN CLI</h1>
+
+    <h2>1° - SET UP THE AZUL APT REPOSITORY</h2>
+
+    <pre class="highlight"> <code class="bash language-bash hljs" style="display:flex;"><div style=""><span style="color: #6c8b9f;font-style: italic"><span class="hljs-comment"># install the necessary dependencies</span></span>
+        <span style="font-weight: bold">sudo </span>apt-get <span style="color: #ffb000;font-weight: bold">-q</span> update
+        <span style="font-weight: bold">sudo </span>apt-get <span style="color: #ffb000;font-weight: bold">-yq</span> <span style="font-weight: bold">install </span>gnupg curl 
+        
+        <span style="color: #6c8b9f;font-style: italic"><span class="hljs-comment"># add Azul's public key</span></span>
+        <span style="font-weight: bold">sudo </span>apt-key adv <span style="color: #4df4ff;font-weight: bold">\</span>
+          <span style="color: #ffb000;font-weight: bold">--keyserver</span> hkp://keyserver.ubuntu.com:80 <span style="color: #4df4ff;font-weight: bold">\</span>
+          <span style="color: #ffb000;font-weight: bold">--recv-keys</span> 0xB1998361219BD9C9
+        
+        <span style="color: #6c8b9f;font-style: italic"><span class="hljs-comment"># download and install the package that adds </span></span>
+        <span style="color: #6c8b9f;font-style: italic"><span class="hljs-comment"># the Azul APT repository to the list of sources </span></span>
+        curl <span style="color: #ffb000;font-weight: bold">-O</span> https://cdn.azul.com/zulu/bin/zulu-repo_1.0.0-3_all.deb
+        
+        <span style="color: #6c8b9f;font-style: italic"><span class="hljs-comment"># install the package</span></span>
+        <span style="font-weight: bold">sudo </span>apt-get <span style="font-weight: bold">install</span> ./zulu-repo_1.0.0-3_all.deb
+        
+        <span style="color: #6c8b9f;font-style: italic"><span class="hljs-comment"># update the package sources</span></span>
+        <span style="font-weight: bold">sudo </span>apt-get update</div></code></pre>
+
+    <h2>2° - WHEN THE REPOSITORY IS SET UP, INSTALL THE REQUIRED AZUL ZULU PACKAGE</h2>
+    <h3>For example, to install Azul Zulu JDK 11, run</h3>
+        
+    <code class="bash language-bash hljs" style="display:flex;"><div style=""><span style="color: #6c8b9f;font-style: italic"><span class="hljs-comment"># install Azul Zulu JDK 11</span></span>
+    <p>apt-get install zulu11-jdk</p>
+
+    <h1>3° - TO VERIFY YOUR INSTALLATION, RUN THE "java -version" COMMAND</h1>
+
+    <pre class="highlight"> <code class="bash language-bash hljs" style="display:flex;"><div style=""><span style="color: #a8e1fe;font-weight: bold">$ </span>java <span style="color: #ffb000;font-weight: bold">-version</span>
+        openjdk version <span style="color: #fff0a6;font-weight: bold"><span class="hljs-string">"11.0.10"</span></span> 2021-01-19 LTS
+        OpenJDK Runtime Environment Zulu11.45+27-CA <span style="color: #4df4ff;font-weight: bold">(</span>build 11.0.10+9-LTS<span style="color: #4df4ff;font-weight: bold">)</span>
+        OpenJDK 64-Bit Server VM Zulu11.45+27-CA <span style="color: #4df4ff;font-weight: bold">(</span>build 11.0.10+9-LTS, mixed mode<span style="color: #4df4ff;font-weight: bold">)</span></div></code></pre>
+    
+
+</body>
+</html>
