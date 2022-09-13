@@ -31,7 +31,7 @@ sudo apt-get update
   
 sudo apt-get install zulu11-jdk
 
-# 3° TO VERIFY YOUR INSTALLATION, RUN THE java -version COMMAND
+# 3° - TO VERIFY YOUR INSTALLATION, RUN THE java -version COMMAND
 
 $ java -version
 openjdk version "11.0.10" 2021-01-19 LTS
